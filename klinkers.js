@@ -4,26 +4,28 @@ function encode(tekst){
 
 	for(i=0; i<array.length; i++){
 
-		if (array[i] === "a") {
+		if (array[i] === "a" || array[i]=== "A") {
 			array[i] = "!";
-			console.log(array[i]);
 
 		}else if(array[i] === "e"){
 			array[i] = "@";
-			console.log(array[i]);
+
 		}else if (array[i] === "u") {
 			array[i] = "#";
-			console.log(array[i]);
+			
 		}else if (array[i] === "i") {
 			array[i] = "%";
-			console.log(array[i]);
 		}
 	}
 	return(array.join(""));
 
 }
-function test(){
+function uitprintenBoven(){
 	var test = document.getElementById('tekst').value;
-	document.getElementById('resultaat').innerHTML = encode(test);
+	document.getElementById('resultaat').innerHTML += encode(test);
+}
+function uitprintenOnder(){
+	var test = document.getElementById('tekst2').value;
+	document.getElementById('resultaat').innerHTML += encode(test);
 }
 
